@@ -1,0 +1,27 @@
+{
+  "name": "pool-svc",
+  "version": "1.0.0",
+  "description": "svc for pooling app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jairaja/pool-svc.git"
+  },
+  "keywords": [
+    "pooling",
+    "node",
+    "service"
+  ],
+  "author": "rjain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jairaja/pool-svc/issues"
+  },
+  "homepage": "https://github.com/jairaja/pool-svc#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
