@@ -1,14 +1,16 @@
 {
   "name": "pool-svc",
   "version": "1.0.0",
-  "description": "svc for pooling app",
-  "main": "index.js",
+  "description": "pooling app svc",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "nodemon --watch src src/server.js",
+    "test": "env NODE_ENV=TEST jest --runInBand"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jairaja/pool-svc.git"
+    "url": "https://github.com/jairaja/pool-svc.git"
   },
   "keywords": [
     "pooling",
@@ -22,6 +24,20 @@
   },
   "homepage": "https://github.com/jairaja/pool-svc#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.1"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testMatch": [
+      "**/?(*.)+(spec|test).[jt]s"
+    ]
   }
 }
